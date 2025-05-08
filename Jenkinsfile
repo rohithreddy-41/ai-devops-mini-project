@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/rohithreddy-41/ai-devops-mini-project.git'
+                git 'https://github.com/rohithreddy-41/ai-devops-mini-project.git-'
             }
         }
 
