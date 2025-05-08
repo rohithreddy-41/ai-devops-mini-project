@@ -4,7 +4,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/rohithreddy-41/ai-devops-mini-project.git-'
+                checkout([$class: 'GitSCM',
+                    userRemoteConfigs: [[
+                        url: 'https://github.com/rohithreddy-41/ai-devops-mini-project.git-',
+                        credentialsId: 'github-token'
+                    ]],
+                    branches: [[name: '*/main']]
+                ])
             }
         }
 
@@ -27,4 +33,4 @@ pipeline {
         }
     }
 }
-
+i
