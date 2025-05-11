@@ -22,13 +22,13 @@ pipeline {
 
         stage('Run AI Prediction') {
             steps {
-                sh 'python3 ml/analyze_build.py'
+                bat 'python3 ml/analyze_build.py'
             }
         }
 
         stage('Build App') {
             steps {
-                sh 'python3 app/main.py'
+                bat 'python3 app/main.py'
             }
         }
     }
