@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run AI Prediction') {
             steps {
-                bat 'python3 ml/analyze_build.py'
+                bat 'python ml/analyze_build.py'
             }
         }
 
