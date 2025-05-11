@@ -12,8 +12,10 @@ y = df['build_success']
 # Train model
 model = RandomForestClassifier().fit(X, y)
 
-# Simulate current build input (example: 5 changes, tests failed)
-current = [[5, 0]]
+# Simulate current build input (example: 2 changes, tests passed)
+current = [[2, 1]]  # <== Modified for higher success probability
+
+# Predict
 prediction = model.predict(current)
 prob = model.predict_proba(current)[0][1]
 
