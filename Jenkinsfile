@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run AI Prediction') {
     steps {
-        bat 'set PYTHONIOENCODING=utf-8 && python ml/analyze_build.py'
+        bat 'set python ml/analyze_build.py'
     }
 }
 
