@@ -19,8 +19,8 @@ prob = model.predict_proba(current)[0][1]
 
 # Output and exit logic
 if prediction[0] == 0:
-    print(f"⚠️ High failure risk! Probability of success: {prob:.2f}")
+    print(f"High failure risk! Probability of success: {prob:.2f}")
     sys.exit(1)
 else:
-    print(f"✅ Low risk. Proceeding... Success probability: {prob:.2f}")
+    print(f"Low risk. Proceeding... Success probability: {prob:.2f}")
 
