@@ -6,7 +6,7 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM',
                     userRemoteConfigs: [[
-                        url: 'https://github.com/rohithreddy-41/ai-devops-mini-project.git-',
+                        url: 'https://github.com/rohithreddy-41/ai-devops-mini-project',
                         credentialsId: 'github-token'
                     ]],
                     branches: [[name: '*/main']]
