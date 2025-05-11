@@ -28,7 +28,7 @@ pipeline {
 
         stage('Build App') {
             steps {
-                bat 'python3 app/main.py'
+                bat 'python app/main.py'
             }
         }
     }
