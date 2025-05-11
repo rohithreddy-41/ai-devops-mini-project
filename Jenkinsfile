@@ -21,10 +21,10 @@ pipeline {
         }
 
         stage('Run AI Prediction') {
-            steps {
-                bat 'python ml/analyze_build.py'
-            }
-        }
+    steps {
+        bat 'set PYTHONIOENCODING=utf-8 && python ml/analyze_build.py'
+    }
+}
 
         stage('Build App') {
             steps {
